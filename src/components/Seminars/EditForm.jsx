@@ -19,7 +19,7 @@ const MyTextInput = ({ label, ...props }) => {
 
 const schema = Yup.object({
   title: Yup.string().min(2, 'Минимум 2 символа!').required('Обязательное поле!'),
-  description: Yup.string().min(10, 'Не менее 10 символов'),
+  description: Yup.string().min(10, 'Не менее 10 символов').required('Обязательно поле!'),
   photo: Yup.string().url('Введите корректную ссылку').required('Обязательное поле'),
 });
 
